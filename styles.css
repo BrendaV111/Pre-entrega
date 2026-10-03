@@ -1,0 +1,397 @@
+
+  /*ESTILOS GENERALES*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #CDB4FF;
+    background-color: #BDE0FE;
+    line-height: 1.6;
+}
+
+ /*HEADER Y NAVEGACIÓN*/
+
+header {
+    background: #211225;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-contenedor img {
+    width: 300px;
+    max-width: 100%;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #e7c76b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    /* Background con degradado */
+    background:
+        linear-gradient(rgba(33, 18, 37, 0.75), rgba(33, 18, 37, 0.75)),
+        url("/assets/AMIGURUMI2.jpg");
+    background-size: cover;
+    background-position: center 20%;
+}
+
+.hero-contenido {
+    color: white;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 4rem;
+    color: #e7c76b;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.boton,
+button {
+    display: inline-block;
+    background-color: #b99745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.boton:hover,
+button:hover {
+    background-color: #8e7132;
+}
+
+/* SECCIONES */
+
+.seccion {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #4c2d52;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* PRODUCTOS - FLEXBOX */
+
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card-producto {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+.card-producto img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-contenido {
+    padding: 20px;
+}
+
+.card-contenido h3 {
+    margin-bottom: 8px;
+    color: #4c2d52;
+}
+
+.precio {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #9a772f;
+}
+
+/*RESEÑAS - GRID */
+
+.resenas {
+    background-color: #f0e8f2;
+    max-width: none;
+}
+
+.resenas-grid {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.resena {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.resena h3 {
+    color: #b99745;
+    margin-bottom: 10px;
+}
+
+/*CONTACTO */
+
+.contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.contacto-texto {
+    flex: 1;
+}
+
+.contacto-texto h2 {
+    text-align: left;
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cdbfd0;
+    border-radius: 6px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #b99745;
+}
+
+button {
+    margin-top: 5px;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #211225;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo-contenedor img {
+        width: 250px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .resenas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+
+    .contacto-texto,
+    form {
+        width: 100%;
+    }
+
+    .contacto-texto h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .seccion {
+        padding: 50px 18px;
+    }
+
+    .card-producto {
+        width: 100%;
+    }
+}
+audio {
+    opacity: 0.7;
+}
+
+/* ===== ESTILOS PARA producto.html ===== */
+
+.detalle-producto {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 25px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.detalle-imagen,
+.detalle-informacion {
+    flex: 1;
+}
+
+.detalle-imagen img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.boton-volver {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #b99745;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.boton-volver:hover {
+    color: #8e7132;
+}
+
+.detalle-informacion h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3.5rem;
+    color: #4c2d52;
+}
+
+.detalle-precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #9a772f;
+    margin: 10px 0 20px;
+}
+
+.detalle-informacion h2 {
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+.especificaciones {
+    padding-left: 25px;
+    margin: 10px 0 25px;
+}
+
+.boton-comprar {
+    background-color: #b99745;
+    color: white;
+    border: none;
+    padding: 13px 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.boton-comprar:hover {
+    background-color: #8e7132;
+}
+
+@media (max-width: 768px) {
+
+    .detalle-producto {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .detalle-imagen,
+    .detalle-informacion {
+        width: 100%;
+    }
+
+    .detalle-informacion h1 {
+        font-size: 2.8rem;
+    }
+}
