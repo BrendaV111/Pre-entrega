@@ -64,7 +64,7 @@ nav a:hover {
     /* Background con degradado */
     background:
         linear-gradient(rgba(33, 18, 37, 0.75), rgba(33, 18, 37, 0.75)),
-        url("/assets/AMIGURUMI2.jpg");
+        url("../assets/AMIGURUMI2.jpg");
     background-size: cover;
     background-position: center 20%;
 }
